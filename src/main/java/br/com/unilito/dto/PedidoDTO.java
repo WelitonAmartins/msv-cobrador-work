@@ -6,16 +6,14 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import br.com.unilito.enums.StatusPedido;
-import br.com.unilito.enums.TipoPagamento;
-import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @JsonIgnoreProperties
-@Builder
+@NoArgsConstructor
 public class PedidoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -23,6 +21,6 @@ public class PedidoDTO implements Serializable {
 	private LocalDate dtPedido;
 	private BigDecimal valor;
 	private String email;
-	private TipoPagamento tipo;
-	private StatusPedido status;
+	private Integer tipo;
+	private String status;
 }

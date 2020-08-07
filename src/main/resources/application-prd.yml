@@ -6,6 +6,6 @@ spring:  rabbitmq:    host: ${RABBIT_HOST}
     username: ${RABBIT_USER}
     password: ${RABBIT_PASSWORD}
   datasource:
-    url: ${POSTGRE_URL}
+    url: jdbc:postgresql://${POSTGRE_URL}:${POSTGRE_PORT}/${POSTGRE_DATABASE}
     username: ${POSTGRE_USER}
     password: ${POSTGRE_PASS}
