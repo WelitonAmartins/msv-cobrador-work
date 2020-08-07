@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  
+spring:  rabbitmq:    host: ${RABBIT_HOST}
+    port: ${RABBIT_PORT}
+    username: ${RABBIT_USER}
+    password: ${RABBIT_PASSWORD}
+  datasource:
+    url: ${POSTGRE_URL}
+    username: ${POSTGRE_USER}
+    password: ${POSTGRE_PASS}

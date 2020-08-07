@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  
+spring:  rabbitmq:    host: 192.168.37.136
+    port: 5672
+    username: user
+    password: unisenha
+  datasource:
+    url: jdbc:postgresql://192.168.37.136
+    username: postreges
+    password: unisenha
