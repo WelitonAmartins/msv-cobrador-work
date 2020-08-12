@@ -15,7 +15,7 @@ import br.com.unilito.service.LogBoletoService;
 import br.com.unilito.utils.Utils;
 
 @Service
-public class DebitoWorker {
+public class BoletoWorker {
 
 	@Autowired
 	private LogBoletoService logBoletoService;
@@ -23,7 +23,7 @@ public class DebitoWorker {
 	@Autowired
 	private EmailService emailService;
 
-	@RabbitListener(queues = "#{debitoQueue.name}")
+	@RabbitListener(queues = "#{boletoQueue.name}")
 	public void recupararMSG(String msg) throws IOException {
 		final PedidoDTO pedido = Utils.paraObjViaJson(msg, new TypeReference<PedidoDTO>() {
 		});
